@@ -1,6 +1,4 @@
-// Описаний в документації
 import flatpickr from 'flatpickr';
-// Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix/build/notiflix-notify-aio';
 
@@ -24,7 +22,6 @@ const options = {
     } else {
       refs.btn.disabled = false;
     }
-    return selectedDates[0];
   },
 };
 
@@ -57,6 +54,7 @@ const timer = {
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
+    refs.btn.disabled = true;
   },
 };
 
